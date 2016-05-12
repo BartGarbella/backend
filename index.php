@@ -12,11 +12,7 @@ if(!isset($_SESSION['loggedin'])) {
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Backend</title>
 
-	<script type="text/javascript" src="/management/src/js/jquery-1.12.3.min.js"></script>
-	<script type="text/javascript" src="/management/src/js/bootstrap.js"></script>
-
-	<link rel="stylesheet" href="/management/src/css/bootstrap.css">
-	<link rel="stylesheet" href="/management/src/css/style.css">
+	
 </head>
 <body>
 <nav class="navbar navbar-inverse">
@@ -29,7 +25,7 @@ if(!isset($_SESSION['loggedin'])) {
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand">Brand</a>
+			<a id="brand" data-toggle="collapse" data-target="#navbar-left" class="navbar-brand">Your Resources</a>
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
@@ -46,37 +42,59 @@ if(!isset($_SESSION['loggedin'])) {
 		</div><!-- /.navbar-collapse -->
 	</div><!-- /.container-fluid -->
 </nav>
-<div class="row">
-	<div class="col-md-3">
-		<div class="nav-custom">
-			<div class="container container-nav-left">
-				<ul>
-						<li>Button 1</li>
-						<li>Button 1</li>
-						<li>Button 1</li>
-						<li>Button 1</li>
-						<li>Button 1</li>
-				</ul>	
-			</div>
-		</div>
-	</div>
-	<div class="col-md-9">
-		<div class="container container-login">
-			<div class="panel panel-custom panel-login">
-				<div class="panel-body">
-					<?php if($_SESSION['user'] == "jessi") { ?>
-						<p>Hallo Jessi! Hier kommt bald noch viel mehr!</p>
-					<?php } ?>
-						<a href="/usatrip/" title="" style="color:#000">USA-Trip-Link</a>
+
+
+<div class="container container-backend">
+	<div class="row">
+		<div class="col-md-3">
+			<div id="navbar-left" class="nav-custom collapse" aria-expanded="false">
+				<div class="">
+					<div class="resource-list">
+						<div class="resource-item">
+							
+								<p>Link</p>
+								<div class="nav-line"></div>
+
+						</div>
+						<div class="resource-item">
+							
+								<p>link 2</p>
+								<div class="nav-line"></div>
+
+						</div>
+						<div class="resource-item">
+							
+								<p>Link 3</p>
+								<div class="nav-line"></div>
+
+						</div>
+					</div>	
 				</div>
 			</div>
 		</div>
-	
+		<div class="col-md-9">
+			<div class="container container-login">
+				<div class="panel panel-custom panel-login">
+					<div class="panel-body">
+						<?php if($_SESSION['user'] == "jessi") { ?>
+							<p>Hallo Jessi! Hier kommt bald noch viel mehr!</p>
+						<?php } ?>
+							<a href="/usatrip/" title="" style="color:#000">USA-Trip-Link</a>
+					</div>
+				</div>
+			</div>
+		
+		</div>
 	</div>
 </div>
 
 
 </body>
+<script type="text/javascript" src="/management/src/js/jquery-1.12.3.min.js"></script>
+	<script type="text/javascript" src="/management/src/js/bootstrap.js"></script>
+
+	<link rel="stylesheet" href="/management/src/css/bootstrap.css">
+	<link rel="stylesheet" href="/management/src/css/style.css">
 <script type="text/javascript" src="/management/src/js/stylefunc.js"></script>
 
 </html>
