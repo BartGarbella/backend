@@ -4,7 +4,7 @@ session_start();
 if(!isset($_SESSION['loggedin'])) {
 	require('management/templates/login.php');
 }elseif($_SESSION['loggedin'] == true){
-	require '/include/config.php';
+	require 'include/config.php';
 }
 
 
